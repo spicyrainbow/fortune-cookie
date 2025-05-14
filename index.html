@@ -6,7 +6,12 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;500;700&display=swap" rel="stylesheet">
+    
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400..840;1,400..840&display=swap');
+</style>
 
+    
     <style>
       .karma-medium {
         font-family: "Karma", serif;
@@ -14,8 +19,15 @@
         font-style: normal;
       }
 
+      .andada-pro-<Andada-Pro> {
+  font-family: "Andada Pro", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
       h1 {
         font-family: "Karma", karma-medium;
+        text-align: center;
       }
 
       #greeting {
@@ -63,42 +75,7 @@
 #enter:hover {
   border-color: #A84040;
 }
-/*       #username{
-      position: absolute;
-        top: 1000px;
-        align-items: center;
-left: 45vw;
-         transform: translate(-50%, 0);     
-  display: inline-block;
-        
-      padding: 0.5rem 0.5rem;
-  font-size: 1rem;
-  border: 2px solid #974B22;
-  border-radius: 10px;
-  width: 150px; 
-         margin: 0 auto;   
-      }
-      
-      #enter {
-    position: absolute;
-        top: 1000px;
-        align-items: center;
-left: 56vw;
-         transform: translate(-50%, 0);     
-  display: inline-block;
-        
-        
-  padding: 0.5rem 1.5rem;
-  font-size: 1rem;
-  background-color: #C85252;
-  color: #fff;
-  border: 2px solid #C85252;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-        margin-left: 0.6rem;
-}
-       */
+
       .fortune-cookie {
         /*         display: block;
   margin-left: auto;
@@ -108,11 +85,28 @@ left: 56vw;
         display: block;
         margin: 50vh auto;
         margin-top: 10px;
-   margin-bottom: 20px;
-        
-        /* 30px top & bottom, auto left & right */
-
+        margin-bottom: 20px;
       }
+        
+  .fortune-label {
+  display: inline-block;       
+  background-color: #fff;     
+  border: 2px solid Black;   
+  padding: 4rem 5rem; 
+  font-family: "Andada Pro", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;  
+  font-size: 2rem;
+  color: #D91D1D;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+         transform: translate(-50%, 0);
+        align-items: center;
+}
+
+      
     </style>
   </head>
   <body>
@@ -132,6 +126,10 @@ left: 56vw;
   <button id="enter">Enter</button>
 </div>
 
+    <div class="fortune-label">
+    Do what you love. The rest will fall into place.
+  </div>
+    
   </body>
 </html>
 
