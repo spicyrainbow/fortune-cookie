@@ -1,0 +1,101 @@
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Accept A Fortune Cookie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karma:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+    
+   
+ .karma-medium {
+  font-family: "Karma", serif;
+  font-weight: 500;
+  font-style: normal;
+}    
+ 
+      h1{
+       font-family: "Karma", karma-medium; 
+      }  
+    
+       #greeting {
+    font-family: "Karma", serif;
+  font-weight: 500;
+  font-style: normal;
+  
+    color: #66402E;                 
+    text-align: center;       
+  }
+    
+      .fortune-cookie{
+/*         display: block;
+  margin-left: auto;
+  margin-right: auto; */
+        height: 322px;
+        width: 429px; 
+        display: block;
+  margin: 20vh auto; /* 30px top & bottom, auto left & right */
+    
+      }
+      
+    
+    </style>
+  </head>
+  <body>
+    <h1>
+   Accept A Fortune Cookie
+    </h1>  
+        
+<img class="fortune-cookie img-item" src="fortune-cookie.gif" alt="fortune-cookie" >
+    
+      <div id="greeting">
+  What's your name?
+</div>
+   
+    
+  <input id="username">
+  <button id="enter">Enter</button>
+    
+  </body>
+</html>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/gh/netizenorg/netnet-standard-library/build/nn.min.js"></script>
+<script>
+/* global nn */
+let user
+
+function messages (name) {
+  return [
+    `hello ${name}, would you like to open a fortune cookie?`,
+    `hello ${name}, this is ur first fortune`,
+    `hello ${name}, this is ur second fortune`,
+  ]
+}
+  
+function saveUsername () {
+  user = nn.get('#username').value  
+  localStorage.setItem("user-name", user)
+}
+
+function setup () {
+  user = localStorage.getItem("user-name")
+  console.log(user)
+  if (!user) {
+    nn.get('#greeting').css({ display: 'block' })
+    nn.get('#enter').on('click', saveUsername)
+  } else {
+    nn.get('#greeting').css({ display: 'none' })
+  }
+  
+  const m = messages(user)
+  // do stuff with the messages
+}
+
+nn.on('load', setup)
+
+</script>
